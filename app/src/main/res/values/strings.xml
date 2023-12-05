@@ -6,4 +6,5 @@
     <string name="button_Agregar">Agregar Evento</string>
     <string name="button_Mostrar">Mostrar Lista De Eventos</string>
     <string name="button_Cumplir">Cumplir Lista De Eventos</string>
+    <string name="todo">TODO</string>
 </resources>
