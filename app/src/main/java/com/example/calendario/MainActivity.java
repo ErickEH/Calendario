@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button_Mostrar = findViewById(R.id.button_Mostrar);
         button_Cumplir = findViewById(R.id.button_Cumplir);
         TextView outputTextView = findViewById(R.id.outputTextView);
+        //Mostar Los Nodos Generados
         outputTextView.setVisibility(View.INVISIBLE);
         final boolean[] invisible = {true};
         button_Mostrar.setOnClickListener(new View.OnClickListener() {
@@ -47,6 +48,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
             }
         });
+
+        //Permite la creación de los Nodos y Actualizar un TextView invisible
         button_evento.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,6 +58,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
+        //Compara la fecha guardada en los nodos con la fecha actual
+        //Si ambas son iguales entonces el Nodo inicio pasara a apuntar al siguiente
         button_Cumplir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -73,7 +78,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
     }
-
+    //Función que llama a la clase Nodo y permite la estructura de los mismos
     public void agregarNodos(){
         Nodo nuevoNodo = new Nodo(text_Fecha, text_evento);
         if(inicio == null){
@@ -87,6 +92,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         text_Fecha.setText("");
         text_evento.setText("");
     }
+    //Actualiza un EditText invisible con todos los Nodos que se tienen disponibles
     private void actualizarSalida(){
         StringBuilder resultado = new StringBuilder();
         Nodo imp = inicio;
@@ -98,7 +104,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         outputTextView.setText(resultado.toString());
 
     }
-
+    //Un boton que permite al usuario seleccionar una fecha que quiera y lo devuelve en
+    //El EditText text_Fecha
     @Override
     public void onClick(View v) {
         if( v == button_fecha){
@@ -118,6 +125,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    //Funcion que Permite guardar el dia actual y regresa un String fecha para comparar
     private String fechaHoy(){
         Calendar fechaActual = Calendar.getInstance();
         int dia1, mes1, año1;

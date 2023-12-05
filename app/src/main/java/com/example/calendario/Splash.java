@@ -12,6 +12,8 @@ public class Splash extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+
+        //Splash que dura 5 segundos que hace el intercambio de el Splash al MainActivity
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
