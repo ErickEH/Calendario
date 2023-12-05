@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Calendario</string>
+    <string name="button_F">Fecha</string>
+    <string name="text_Fecha">Presione El Boton De Fecha.</string>
+    <string name="text_Evento">Ingrese El Nombre Del Evento.</string>
+    <string name="button_Agregar">Agregar Evento</string>
+    <string name="button_Mostrar">Mostrar Lista De Eventos</string>
+    <string name="button_Cumplir">Cumplir Lista De Eventos</string>
+</resources>
